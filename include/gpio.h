@@ -10,9 +10,26 @@
 #include <stdint.h>
 #include "device.h"
 
-void pinMode(GPIO_Port port, uint8_t pin,Pin_Mode mode);
-void digitalWrite(GPIO_Port port, uint8_t pin, GPIO_State state);
-uint8_t digitalRead(GPIO_Port port, uint8_t pin);
-void toggle(GPIO_Port port, uint8_t pin);
+void pinMode(
+  GPIO_Port port, 
+  uint8_t pin,
+  Pin_Mode mode
+);
+
+void digitalWrite(
+  GPIO_Port port, 
+  uint8_t pin, 
+  GPIO_State state
+);
+
+uint8_t digitalRead(
+  GPIO_Port port, 
+  uint8_t pin
+);
+
+void toggle(
+  GPIO_Port port, 
+  uint8_t pin
+);
 
 #endif
