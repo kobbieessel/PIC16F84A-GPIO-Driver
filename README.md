@@ -3,21 +3,36 @@ A bare-metal GPIO driver for the PIC16F84A microcontroller written in C, featuri
 Tested in Proteus, with XC8-specific functions used only for delay support. No high-level GPIO libraries are used.
 
 ## Project Structue
-### include/
-   - device.h
-   - gpio.h
-   - delay.h
 
-### src/
-   - gpio.c
-   - delay.c
-
-### examples/
-   - blink/
-
-### simulation/
-   - proteus/
-
+```test
+PIC16F84A-GPIO-Driver/
+│
+├── README.md
+├── LICENSE
+├── .gitignore
+│
+├── include/
+│   ├── device.h
+│   ├── gpio.h
+│   └── delay.h
+│
+├── src/
+│   ├── gpio.c
+│   └── delay.c
+│
+├── examples/
+│   └── blink/
+│       └── main.c
+│
+├── simulation/
+│   ├── proteus/
+│   │   └── Blink.pdsprj
+│   └── images/
+│       └── blink_test.png
+│
+└── datasheet/
+    └── PIC16F84A
+```
 ## Features
 - Configure individual GPIO pins as input or output
 - Set GPIO pins HIGH or LOW
