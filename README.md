@@ -84,6 +84,26 @@ The frequency can be overridden by the user before including the configuration h
 #define _XTAL_FREQ 8000000UL
 ```
 
+## Code Example: toggle API
+```c
+#include "gpio.h"
+#include "delay.h"
+
+void main(void)
+{
+    // Sets the mode of RA0
+    pinMode(GPIO_PORTA, 0, OUTPUT); 
+
+    // toggle RA0 every half a second
+    while (1)
+    {
+        toggle(GPIO_PORTA, 0); 
+        delay(500);
+    }
+}
+```
+## Simulation result (Proteus)
+![toggling led connected to RA0](/simulation/images/blink.gif)
 
 ## Future Improvements
 - External interrupt driver
@@ -92,7 +112,6 @@ The frequency can be overridden by the user before including the configuration h
 - Debounced digital input
 - Error/status handling
 - Additional PIC16 peripherals
-
 
 ## Author
 Kwabena Amokao
