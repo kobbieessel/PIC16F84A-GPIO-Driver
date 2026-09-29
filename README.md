@@ -1,6 +1,6 @@
 # PIC16F84A Bare-Metal GPIO Driver
 A bare-metal GPIO driver for the PIC16F84A microcontroller written in C, featuring direct register access and Arduino-style APIs for configuring, reading, writing, and toggling GPIO pins. 
-Tested in Proteus, with XC8-specific functions used only for delay support. No high-level GPIO libraries are used.
+Tested in Proteus and validated on a physical PIC16F84A microcontroller. XC8-specific functions are used only for delay support. No high-level GPIO libraries are used.
 
 ## Project Structure
 
@@ -28,8 +28,10 @@ PIC16F84A-GPIO-Driver/
 ├── simulation/
 │   ├── proteus/
 │   │   └── Blink.pdsprj
+│   ├── assets/
+│   │   └── pic16f84a_gpio_driver_test.gif
 │   └── images/
-│       └── blink_test.png
+│       └── blink.gif
 │
 └── datasheet/
     └── PIC16F84A
