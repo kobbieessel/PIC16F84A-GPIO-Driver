@@ -106,6 +106,9 @@ void main(void)
 ## Simulation result (Proteus)
 ![toggling led connected to RA0](/simulation/images/blink.gif)
 
+## Hardware Test
+![PIC16F84A GPIO Driver Test](/simulation/assets/pic16f84a_gpio_driver_test.gif)
+
 ## Future Improvements
 - External interrupt driver
 - Timer0 driver
