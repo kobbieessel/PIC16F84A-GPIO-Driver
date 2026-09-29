@@ -105,13 +105,34 @@ void main(void)
     }
 }
 ```
-## Simulation result (Proteus)
+## Simulation result 
+Proteus was use for simulation during development to verify basic GPIO
+configuration and toggle behavior.
+
 ![toggling led connected to RA0](/simulation/images/blink.gif)
 
-## Hardware Test
-The driver was tested on a PIC16F84A microcontroller to verify GPIO output control and toggle behavior.
+## Hardware Validation
+The GPIO driver was tested on a physical PIC16F84A microcontroller.
+RA0 was configured as an output and toggled every 500 ms using the
+driver's `toggle()` API.
+
+### Physical Test
 
 ![PIC16F84A GPIO Driver Test](/simulation/assets/pic16f84a_gpio_driver_test.gif)
+
+### Oscilloscope Verification
+The measured waveform shows approximately:
+
+- HIGH time: 500 ms
+- LOW time: 500 ms
+- Period: 1 s
+- Frequency: 1 Hz
+- Duty cycle: 50%
+
+The oscilloscope measurement confirms that the GPIO driver produces
+the expected output behavior on physical hardware.
+
+![PIC16F84A GPIO Oscilloscope Test](simulation/assets/ra0_scope_test.png)
 
 ## Future Improvements
 - External interrupt driver
