@@ -20,7 +20,7 @@ PIC16F84A-GPIO-Driver/
 │   ├── gpio.c
 │   └── delay.c
 │
-├── examples/
+├── example/
 │   └── blink/
 │       └── main.c
 │
