@@ -1,5 +1,5 @@
 /*
- * File:   main.c
+ * File:   device.c
  * Author: Kwabena Amoako
  *
  * Created on September 23, 2026, 3:57 PM
