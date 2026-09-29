@@ -107,6 +107,8 @@ void main(void)
 ![toggling led connected to RA0](/simulation/images/blink.gif)
 
 ## Hardware Test
+The driver was tested on a PIC16F84A microcontroller to verify GPIO output control and toggle behavior.
+
 ![PIC16F84A GPIO Driver Test](/simulation/assets/pic16f84a_gpio_driver_test.gif)
 
 ## Future Improvements
