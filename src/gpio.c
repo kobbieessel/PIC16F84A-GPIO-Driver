@@ -11,6 +11,9 @@
 #define BIT(n) (1U << (n))
 #define BIT_FIELD(value,bit_position) ((value) << (bit_position))
 
+static uint8_t porta_shadow = 0;
+static uint8_t portb_shadow = 0;
+
 void pinMode(GPIO_Port port, uint8_t pin,Pin_Mode mode){
     uint8_t mask = (uint8_t)BIT(pin);
     switch (port){
@@ -48,22 +51,24 @@ void digitalWrite(GPIO_Port port, uint8_t pin, GPIO_State state){
         case GPIO_PORTA:
             if (pin <= 4){
                 if(state == HIGH){
-                    BANK0->PORTA |= mask;
+                    porta_shadow |= mask;
                 }
                 else if(state == LOW){
-                    BANK0->PORTA &= (uint8_t)~mask;
-                }   
+                    porta_shadow &= (uint8_t)~mask;
+                }  
+             BANK0->PORTA = porta_shadow;
             }
             break;
             
         case GPIO_PORTB:
             if (pin <= 7){
                 if(state == HIGH){
-                    BANK0->PORTB |= mask;
+                    portb_shadow |= mask;
                 }
                 else if(state == LOW){
-                    BANK0->PORTB &= (uint8_t)~mask;
+                    portb_shadow &= (uint8_t)~mask;
                 }   
+             BANK0->PORTB = portb_shadow;
             }
             break;
         
@@ -100,13 +105,15 @@ void toggle(GPIO_Port port, uint8_t pin){
     switch(port){
         case GPIO_PORTA:
             if(pin <= 4){
-                BANK0->PORTA ^= mask;
+                porta_shadow ^= mask;
+                BANK0->PORTA = porta_shadow;
             }
             break;
             
         case GPIO_PORTB:
             if(pin <= 7){
-                BANK0->PORTB ^= mask;
+                portb_shadow ^= mask;
+                BANK0->PORTB = portb_shadow;
             }
             break;
             
