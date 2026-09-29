@@ -114,6 +114,6 @@ void main(void)
 - Additional PIC16 peripherals
 
 ## Author
-Kwabena Amokao
+Kwabena Amoako
 - LinkedIn: [Kwabena E. Amoako](https://www.linkedin.com/in/kwabena-e-amoako/)
 
