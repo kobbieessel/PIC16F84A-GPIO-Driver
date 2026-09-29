@@ -1,5 +1,5 @@
 /*
- * File:   main.c
+ * File:   gpio.h
  * Author: Kwabena Amoako
  *
  * Created on September 24, 2026, 3:57 PM
