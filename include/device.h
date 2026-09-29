@@ -7,6 +7,8 @@
 #ifndef DEVICE_H
 #define DEVICE_H
 
+<stdint.h>
+    
 typedef volatile uint8_t _IO;
 
 typedef struct{
