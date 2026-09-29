@@ -1,5 +1,5 @@
 /*
- * File:   main.c
+ * File:   PIC_CONFIG.h
  * Author: Kwabena Amoako
  *
  * Created on September 25, 2026, 3:57 PM
