@@ -29,6 +29,8 @@ PIC16F84A-GPIO-Driver/
 │   ├── proteus/
 │   │   └── Blink.pdsprj
 │   ├── assets/
+│   │   ├── pic16f84a_driver_test_scope.gif
+│   │   ├── pic_driver_test.jpg
 │   │   └── pic16f84a_gpio_driver_test.gif
 │   └── images/
 │       └── blink.gif
@@ -132,7 +134,9 @@ The measured waveform shows approximately:
 The oscilloscope measurement confirms that the GPIO driver produces
 the expected output behavior on physical hardware.
 
-![PIC16F84A GPIO Oscilloscope Test](simulation/assets/ra0_scope_test.png)
+![PIC16F84A GPIO Oscilloscope Test](simulation/assets/pic16f84a_driver_test_scope.gif)
+
+![PIC16F84A GPIO Oscilloscope Test](simulation/assets/pic_driver_test.jpg)
 
 ## Future Improvements
 - External interrupt driver
