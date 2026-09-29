@@ -1,5 +1,5 @@
 /*
- * File:   main.c
+ * File:   gpio.c
  * Author: Kwabena Amoako
  *
  * Created on September 24, 2026, 3:57 PM
@@ -11,8 +11,8 @@
 #define BIT(n) (1U << (n))
 #define BIT_FIELD(value,bit_position) ((value) << (bit_position))
 
-static uint8_t porta_shadow = 0;
-static uint8_t portb_shadow = 0;
+static uint8_t porta_shadow = 0U;
+static uint8_t portb_shadow = 0U;
 
 void pinMode(GPIO_Port port, uint8_t pin,Pin_Mode mode){
     uint8_t mask = (uint8_t)BIT(pin);
@@ -56,6 +56,9 @@ void digitalWrite(GPIO_Port port, uint8_t pin, GPIO_State state){
                 else if(state == LOW){
                     porta_shadow &= (uint8_t)~mask;
                 }  
+                else{
+                    break;
+                }
              BANK0->PORTA = porta_shadow;
             }
             break;
@@ -67,7 +70,10 @@ void digitalWrite(GPIO_Port port, uint8_t pin, GPIO_State state){
                 }
                 else if(state == LOW){
                     portb_shadow &= (uint8_t)~mask;
-                }   
+                }
+                else{
+                    break;
+                }
              BANK0->PORTB = portb_shadow;
             }
             break;
