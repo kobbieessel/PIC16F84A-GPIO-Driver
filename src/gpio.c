@@ -1,8 +1,6 @@
 /*
  * File:   gpio.c
  * Author: Kwabena Amoako
- *
- * Created on September 24, 2026, 3:57 PM
  */
 
 #include <stdint.h>
