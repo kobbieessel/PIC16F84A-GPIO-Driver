@@ -1,8 +1,6 @@
 /*
  * File:   device.h
  * Author: Kwabena Amoako
- *
- * Created on September 23, 2026, 3:57 PM
  */
 #ifndef DEVICE_H
 #define DEVICE_H
