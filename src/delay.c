@@ -1,8 +1,6 @@
 /*
  * File:   delay.c
  * Author: Kwabena Amoako
- *
- * Created on September 25, 2026, 3:57 PM
  */
 #include "PIC_CONFIG.h"
 #include <xc.h>
