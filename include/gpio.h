@@ -1,8 +1,6 @@
 /*
  * File:   gpio.h
  * Author: Kwabena Amoako
- *
- * Created on September 24, 2026, 3:57 PM
  */
 #ifndef GPIO_H
 #define GPIO_H
