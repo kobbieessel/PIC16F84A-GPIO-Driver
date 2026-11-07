@@ -5,7 +5,7 @@
 #include "PIC_CONFIG.h"
 #include <xc.h>
 #include <stdint.h>
-#include "delay.h"
+#include "include/delay.h"
 
 void delay(uint32_t duration){
     while (duration--){
