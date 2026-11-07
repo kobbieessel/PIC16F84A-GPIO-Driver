@@ -4,9 +4,9 @@
  *
  * Created on September 26, 2026, 3:57 PM
  */
-#include "gpio.h"
-#include "device.h"
-#include "delay.h"
+#include "include/gpio.h"
+#include "include/device.h"
+#include "include/delay.h"
 
 void main(void){
     pinMode(GPIO_PORTA,0,OUTPUT);
