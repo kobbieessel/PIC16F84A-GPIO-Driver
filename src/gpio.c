@@ -4,7 +4,7 @@
  */
 
 #include <stdint.h>
-#include "gpio.h"
+#include "include/gpio.h"
  
 #define BIT(n) (1U << (n))
 #define BIT_FIELD(value,bit_position) ((value) << (bit_position))
