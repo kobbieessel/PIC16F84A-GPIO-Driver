@@ -44,6 +44,15 @@ typedef enum{
     OUTPUT = 0
 }Pin_Mode;
 
+/*
+typedef enum{
+    RA0 = 0U,
+    RA1.
+    RA2,
+    RA3,
+    RA4
+}*/
+
 typedef enum{
     GPIO_PORTA = 0,
     GPIO_PORTB = 1
